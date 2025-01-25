@@ -1,0 +1,449 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Pathways to America</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+    <style>
+	html {
+    scroll-behavior: smooth;
+}
+        .faq-toggle {
+            cursor: pointer;
+        }
+        .how-it-works-item {
+            cursor: pointer;
+        }
+        .how-it-works-item:hover .icon {
+            color: #1d4ed8;
+        }
+        .how-it-works-item:hover .title {
+            color: #1d4ed8;
+        }
+		.hover-effect:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s;
+        }
+        .hover-bg:hover {
+            background-color: #e0f7fa;
+            transition: background-color 0.3s;
+        }
+        .hover-shadow:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: box-shadow 0.3s;
+        }
+        .hover-icon:hover::after {
+            content: '\f0f0';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            margin-left: 8px;
+        }
+        .hover-bold:hover {
+            font-weight: 700;
+            transition: font-weight 0.3s;
+        }
+        .hover-shimmer:hover {
+            background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.5) 50%, rgba(255,255,255,0) 100%);
+            background-size: 200% 100%;
+            animation: shimmer 1s infinite;
+        }
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+        .scroll-fade {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s, transform 0.6s;
+        }
+        .scroll-fade.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .scroll-slide-left {
+            opacity: 0;
+            transform: translateX(-20px);
+            transition: opacity 0.6s, transform 0.6s;
+        }
+        .scroll-slide-left.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .scroll-slide-right {
+            opacity: 0;
+            transform: translateX(20px);
+            transition: opacity 0.6s, transform 0.6s;
+        }
+        .scroll-slide-right.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .scroll-zoom {
+            opacity: 0;
+            transform: scale(0.95);
+            transition: opacity 0.6s, transform 0.6s;
+        }
+        .scroll-zoom.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+        .scroll-bounce {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s, transform 0.6s;
+        }
+        .scroll-bounce.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+		
+    </style>
+</head>
+<body class="font-roboto">
+<!-- Header -->
+<header class="bg-blue-700 text-white shadow-lg">
+    <div class="container mx-auto flex justify-between items-center py-4 px-6">
+        <div class="text-2xl font-bold">
+            <i class="fas fa-road mr-2"></i>
+            Pathways to America
+        </div>
+        <div class="md:hidden">
+            <button id="menu-toggle" class="focus:outline-none">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <nav id="navbar" class="hidden md:flex space-x-4">
+            <a href="index.html">Home</a>
+            <a href="About-Us.html">About Us</a>
+            <a href="Job-Categories-Page.html">Job Categories</a>
+            <a href="How-It-Works.html">How It Works</a>
+            <a href="Application-Form.html">Apply Now</a>
+            <a href="Donation-Page.html">Donate</a>
+            <a href="Contact-Us.html">Contact Us</a>
+        </nav>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden absolute z-50 w-full">
+        <nav class="flex flex-col space-y-2 p-4 bg-blue-700">
+            <a href="index.html">Home</a>
+            <a href="About-Us.html">About Us</a>
+            <a href="Job-Categories-Page.html">Job Categories</a>
+            <a href="How-It-Works.html">How It Works</a>
+            <a href="Application-Form.html">Apply Now</a>
+            <a href="Donation-Page.html">Donate</a>
+            <a href="Contact-Us.html">Contact Us</a>
+        </nav>
+    </div>
+</header>
+
+
+
+
+
+
+
+<div class="container mx-auto p-4">
+   <h1 class="text-3xl font-bold text-center mb-8">
+    Job Categories
+   </h1>
+   <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div class="bg-white p-6 rounded-lg shadow-lg hover-effect scroll-fade" id="healthcare">
+     <img alt="Image representing healthcare professionals and facilities" class="w-full h-48 object-cover mb-4" height="400" src="https://storage.googleapis.com/a1aa/image/SnTwelMJxGxqD6qaAYuQ32fb3xoEB8NG4iIlmxJ1p2esucRoA.jpg" width="600"/>
+     <h2 class="text-2xl font-bold mb-4">
+      Healthcare
+     </h2>
+     <p class="mb-2">
+      Typical Roles: Nurses, Doctors, Medical Technicians, Administrators, and more.
+     </p>
+     <p class="mb-2">
+      Sponsorship Opportunities: Employer-sponsored work visas, training programs, and internships.
+     </p>
+     <p class="mb-2">
+      Participating Companies: Leading hospitals, medical practices, and healthcare organizations.
+     </p>
+     <button class="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700">
+      Know More
+     </button>
+    </div>
+    <div class="bg-white p-6 rounded-lg shadow-lg hover-bg scroll-slide-left" id="trades">
+     <img alt="Image representing trades professionals such as electricians and plumbers" class="w-full h-48 object-cover mb-4" height="400" src="https://storage.googleapis.com/a1aa/image/fVkl3Z5l5Rwlc66WN0EnyfuzzLtPaSuei10EhBvWiAfrd5iQB.jpg" width="600"/>
+     <h2 class="text-2xl font-bold mb-4">
+      Trades
+     </h2>
+     <p class="mb-2">
+      Typical Roles: Skilled tradesmen, contractors, apprentices, and project managers.
+     </p>
+     <p class="mb-2">
+      Sponsorship Opportunities: Training and apprenticeship sponsorships, skilled worker visas.
+     </p>
+     <p class="mb-2">
+      Participating Companies: Local contractors, national service providers, and trade unions.
+     </p>
+     <button class="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700">
+      Know More
+     </button>
+    </div>
+    <div class="bg-white p-6 rounded-lg shadow-lg hover-effect scroll-slide-right" id="engineering">
+     <img alt="Image representing engineering professionals and projects" class="w-full h-48 object-cover mb-4" height="400" src="https://storage.googleapis.com/a1aa/image/kUSRLTMQtzY5DhbItC90ehbIx3t1BjYUJ5xtdM8rvkOyLXEKA.jpg" width="600"/>
+     <h2 class="text-2xl font-bold mb-4">
+      Engineering
+     </h2>
+     <p class="mb-2">
+      Typical Roles: Mechanical, Civil, Electrical Engineers, Technicians, Project Managers.
+     </p>
+     <p class="mb-2">
+      Sponsorship Opportunities: Specialized visa programs, industry-specific internships, and graduate sponsorships.
+     </p>
+     <p class="mb-2">
+      Participating Companies: Top engineering firms, construction companies, tech innovators.
+     </p>
+     <button class="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700">
+      Know More
+     </button>
+    </div>
+    <div class="bg-white p-6 rounded-lg shadow-lg hover-shadow scroll-fade" id="shop-workers">
+     <img alt="Image representing shop workers and retail environments" class="w-full h-48 object-cover mb-4" height="400" src="https://storage.googleapis.com/a1aa/image/HbALo8jYvbb7Pthm6Wb9BR1xORQIVoYbXpwfAS6t2jtqLXEKA.jpg" width="600"/>
+     <h2 class="text-2xl font-bold mb-4">
+      Shop Workers
+     </h2>
+     <p class="mb-2">
+      Typical Roles: Retail associates, store managers, inventory specialists.
+     </p>
+     <p class="mb-2">
+      Sponsorship Opportunities: Retail work visa sponsorships, management training programs.
+     </p>
+     <p class="mb-2">
+      Participating Companies: Major retailers, e-commerce companies, and independent stores.
+     </p>
+     <button class="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700">
+      Know More
+     </button>
+    </div>
+    <div class="bg-white p-6 rounded-lg shadow-lg hover-effect scroll-slide-left" id="landscaping">
+     <img alt="Image representing landscaping professionals and projects" class="w-full h-48 object-cover mb-4" height="400" src="https://storage.googleapis.com/a1aa/image/i0n7K05jZEZILpnUK39tecTLLMsfSAJIrQNR1m7zEBweucRoA.jpg" width="600"/>
+     <h2 class="text-2xl font-bold mb-4">
+      Landscaping
+     </h2>
+     <p class="mb-2">
+      Typical Roles: Landscape designers, gardeners, horticultural specialists.
+     </p>
+     <p class="mb-2">
+      Sponsorship Opportunities: Visa sponsorship for skilled landscaping professionals and apprenticeships.
+     </p>
+     <p class="mb-2">
+      Participating Companies: Landscape design firms, gardening services, maintenance companies.
+     </p>
+     <button class="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700">
+      Know More
+     </button>
+    </div>
+    <div class="bg-white p-6 rounded-lg shadow-lg hover-icon scroll-bounce" id="construction">
+     <img alt="Image representing construction professionals and projects" class="w-full h-48 object-cover mb-4" height="400" src="https://storage.googleapis.com/a1aa/image/czr1OVf5mzSZZS8hQerl2khFndkKjsWeCekYYaSvmQpEeyFhC.jpg" width="600"/>
+     <h2 class="text-2xl font-bold mb-4">
+      Construction
+     </h2>
+     <p class="mb-2">
+      Typical Roles: Construction laborers, project managers, architects, site engineers.
+     </p>
+     <p class="mb-2">
+      Sponsorship Opportunities: Skilled worker visas, project-based sponsorship programs, internships.
+     </p>
+     <p class="mb-2">
+      Participating Companies: Major construction companies, engineering firms, contractors.
+     </p>
+     <button class="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700">
+      Know More
+     </button>
+    </div>
+    <div class="bg-white p-6 rounded-lg shadow-lg hover-shimmer scroll-slide-right" id="cleaning-services">
+     <img alt="Image representing cleaning services professionals and environments" class="w-full h-48 object-cover mb-4" height="400" src="https://storage.googleapis.com/a1aa/image/rlAX1F0oXX5cLRMtkuYX5RP5VRteKkAWL83v2n99nIyvLXEKA.jpg" width="600"/>
+     <h2 class="text-2xl font-bold mb-4">
+      Cleaning Services
+     </h2>
+     <p class="mb-2">
+      Typical Roles: Janitors, cleaning specialists, supervisors, managers.
+     </p>
+     <p class="mb-2">
+      Sponsorship Opportunities: Work visas for cleaning professionals, franchise opportunities.
+     </p>
+     <p class="mb-2">
+      Participating Companies: Cleaning service providers, facility management firms.
+     </p>
+     <button class="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700">
+      Know More
+     </button>
+    </div>
+    <div class="bg-white p-6 rounded-lg shadow-lg hover-bold scroll-zoom" id="finance">
+     <img alt="Image representing finance professionals and environments" class="w-full h-48 object-cover mb-4" height="400" src="https://storage.googleapis.com/a1aa/image/WS2STMRkeGzCDCAfcXfCHiiF1QETOmfmBVinARaSTfil7yFhC.jpg" width="600"/>
+     <h2 class="text-2xl font-bold mb-4">
+      Finance
+     </h2>
+     <p class="mb-2">
+      Typical Roles: Financial analysts, accountants, auditors, investment advisors.
+     </p>
+     <p class="mb-2">
+      Sponsorship Opportunities: Employer-sponsored visas for financial experts, internships, graduate schemes.
+     </p>
+     <p class="mb-2">
+      Participating Companies: Banks, insurance firms, investment companies, accounting firms.
+     </p>
+     <button class="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700">
+      Know More
+     </button>
+    </div>
+    <div class="bg-white p-6 rounded-lg shadow-lg hover-icon scroll-fade" id="technology">
+     <img alt="Image representing technology professionals and environments" class="w-full h-48 object-cover mb-4" height="400" src="https://storage.googleapis.com/a1aa/image/0df8K5syd7xEEiGNdpKeNANLyfiVTazUGXRCHCIAg1PFvcRoA.jpg" width="600"/>
+     <h2 class="text-2xl font-bold mb-4">
+      Technology
+     </h2>
+     <p class="mb-2">
+      Typical Roles: Software developers, IT specialists, data analysts, network engineers.
+     </p>
+     <p class="mb-2">
+      Sponsorship Opportunities: Tech visa programs, internships, graduate sponsorships.
+     </p>
+     <p class="mb-2">
+      Participating Companies: Leading tech companies, startups, and digital service providers.
+     </p>
+     <button class="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700">
+      Know More
+     </button>
+    </div>
+    <div class="bg-white p-6 rounded-lg shadow-lg hover-effect scroll-zoom" id="hospitality">
+     <img alt="Image representing hospitality professionals and environments" class="w-full h-48 object-cover mb-4" height="400" src="https://storage.googleapis.com/a1aa/image/uhQA4wURz8paN5lHQWWCCObHxEMIzHL0vWDj9IJ2hKJ2lLCF.jpg" width="600"/>
+     <h2 class="text-2xl font-bold mb-4">
+      Hospitality
+     </h2>
+     <p class="mb-2">
+      Typical Roles: Hotel staff, chefs, restaurant managers, event coordinators.
+     </p>
+     <p class="mb-2">
+      Sponsorship Opportunities: Employer-sponsored work visas, internship programs in the hospitality sector.
+     </p>
+     <p class="mb-2">
+      Participating Companies: Hotels, restaurants, catering firms, event management agencies.
+     </p>
+     <button class="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700">
+      Know More
+     </button>
+    </div>
+   </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Footer Section -->
+<footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left">
+            <div>
+                <div class="text-2xl font-bold mb-4">
+                    <i class="fas fa-road mr-2"></i>
+                    Pathways to America
+                </div>
+                <p>Paving the Way to US Citizenship</p>
+            </div>
+            <div>
+                <div class="mb-4">
+                    <a class="hover:underline block" href="#"><i class="fas fa-home mr-2"></i>Home</a>
+                    <a class="hover:underline block" href="#"><i class="fas fa-info-circle mr-2"></i>About Us</a>
+                    <a class="hover:underline block" href="#"><i class="fas fa-file-alt mr-2"></i>Apply Now</a>
+                    <a class="hover:underline block" href="#"><i class="fas fa-envelope mr-2"></i>Contact Us</a>
+                    <a class="hover:underline block" href="#"><i class="fas fa-user-secret mr-2"></i>Privacy Policy</a>
+                    <a class="hover:underline block" href="#"><i class="fas fa-file-contract mr-2"></i>Terms of Service</a>
+                </div>
+            </div>
+            <div>
+                <div class="mb-4">
+                    <p><i class="fas fa-phone mr-2"></i>(123) 456-7890</p>
+                    <p><i class="fas fa-envelope mr-2"></i>info@pathwaystoamerica.com</p>
+                    <p><i class="fas fa-map-marker-alt mr-2"></i>123 Main St, Anytown, USA</p>
+                </div>
+            </div>
+            <div>
+                <div class="mb-4">
+                    <a class="text-white mx-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="text-white mx-2" href="#"><i class="fab fa-twitter"></i></a>
+                    <a class="text-white mx-2" href="#"><i class="fab fa-instagram"></i></a>
+                    <a class="text-white mx-2" href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+                <div>
+                    <form class="flex justify-center md:justify-end">
+                        <input class="p-2 rounded-l" placeholder="Subscribe to our newsletter" type="email"/>
+                        <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-r">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>ter>
+<script>
+    document.querySelectorAll('.faq-toggle').forEach(item => {
+        item.addEventListener('click', () => {
+            const answer = item.nextElementSibling;
+            const icon = item.querySelector('i');
+            if (answer.classList.contains('hidden')) {
+                answer.classList.remove('hidden');
+                icon.classList.remove('fa-chevron-down');
+                icon.classList.add('fa-chevron-up');
+            } else {
+                answer.classList.add('hidden');
+                icon.classList.remove('fa-chevron-up');
+                icon.classList.add('fa-chevron-down');
+            }
+        });
+    });
+	<!--------------------ক্লিক করে করার জন্য------------------------------------->
+	     <!-- document.querySelectorAll('.how-it-works-item').forEach(item => { -->
+            <!-- item.addEventListener('click', function() { -->
+                <!-- const step = this.getAttribute('data-step'); -->
+                <!-- document.querySelectorAll('.step-content').forEach(content => { -->
+                    <!-- content.classList.add('hidden'); -->
+                <!-- }); -->
+                <!-- document.getElementById(`step-${step}`).classList.remove('hidden'); -->
+            <!-- }); -->
+        <!-- }); -->
+	
+	
+	document.addEventListener('scroll', function() {
+            const elements = document.querySelectorAll('.scroll-fade, .scroll-slide-left, .scroll-slide-right, .scroll-zoom, .scroll-bounce');
+            elements.forEach(element => {
+                const rect = element.getBoundingClientRect();
+                if (rect.top < window.innerHeight) {
+                    element.classList.add('visible');
+                }
+            });
+        });
+	
+
+    document.querySelectorAll('.how-it-works-item').forEach(item => {
+        item.addEventListener('mouseover', () => {
+            document.querySelectorAll('.step-content').forEach(content => {
+                content.classList.add('hidden');
+            });
+            const step = item.getAttribute('data-step');
+            document.getElementById(`step-${step}`).classList.remove('hidden');
+        });
+    });
+
+    // Set default active step
+    document.getElementById('step-1').classList.remove('hidden');
+
+    // Mobile menu toggle
+    document.getElementById('menu-toggle').addEventListener('click', () => {
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenu.classList.toggle('hidden');
+    });
+</script>
+</body>
+</html>

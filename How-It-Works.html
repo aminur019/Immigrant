@@ -1,0 +1,524 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Pathways to America</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+    <style>
+	html {
+    scroll-behavior: smooth;
+}
+
+.faq-toggle,
+.how-it-works-item {
+    cursor: pointer;
+}
+
+.how-it-works-item:hover .icon,
+.how-it-works-item:hover .title {
+    color: #1d4ed8;
+}
+
+.hover-effect:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+}
+
+.hover-bg:hover {
+    background-color: #e0f7fa;
+    transition: background-color 0.3s;
+}
+
+.hover-shadow:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s;
+}
+
+.hover-icon:hover::after {
+    content: '\f0f0';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    margin-left: 8px;
+}
+
+.hover-bold:hover {
+    font-weight: 700;
+    transition: font-weight 0.3s;
+}
+
+.hover-shimmer:hover {
+    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.5) 50%, rgba(255,255,255,0) 100%);
+    background-size: 200% 100%;
+    animation: shimmer 1s infinite;
+}
+
+@keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+}
+
+.scroll-fade {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s, transform 0.6s;
+}
+
+.scroll-fade.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.scroll-slide-left {
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: opacity 0.6s, transform 0.6s;
+}
+
+.scroll-slide-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.scroll-slide-right {
+    opacity: 0;
+    transform: translateX(20px);
+    transition: opacity 0.6s, transform 0.6s;
+}
+
+.scroll-slide-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.scroll-zoom {
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 0.6s, transform 0.6s;
+}
+
+.scroll-zoom.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.scroll-bounce {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s, transform 0.6s;
+}
+
+.scroll-bounce.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    color: #000;
+}
+
+.hover-underline-animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+}
+
+.slide-in-left {
+    transform: translateX(-100%);
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+    opacity: 0;
+}
+
+.slide-in-left.visible {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.slide-in-right {
+    transform: translateX(100%);
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+    opacity: 0;
+}
+
+.slide-in-right.visible {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.slide-up {
+    transform: translateY(100%);
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+    opacity: 0;
+}
+
+.slide-up.visible {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.zoom-in:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+
+		
+    </style>
+</head>
+<body class="font-roboto">
+<!-- Header -->
+<header class="bg-blue-700 text-white shadow-lg">
+    <div class="container mx-auto flex justify-between items-center py-4 px-6">
+        <div class="text-2xl font-bold">
+            <i class="fas fa-road mr-2"></i>
+            Pathways to America
+        </div>
+        <div class="md:hidden">
+            <button id="menu-toggle" class="focus:outline-none">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <nav id="navbar" class="hidden md:flex space-x-4">
+            <a href="index.html">Home</a>
+            <a href="About-Us.html">About Us</a>
+            <a href="Job-Categories-Page.html">Job Categories</a>
+            <a href="How-It-Works.html">How It Works</a>
+            <a href="Application-Form.html">Apply Now</a>
+            <a href="Donation-Page.html">Donate</a>
+            <a href="Contact-Us.html">Contact Us</a>
+        </nav>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden absolute z-50 w-full">
+        <nav class="flex flex-col space-y-2 p-4 bg-blue-700">
+            <a href="index.html">Home</a>
+            <a href="About-Us.html">About Us</a>
+            <a href="Job-Categories-Page.html">Job Categories</a>
+            <a href="How-It-Works.html">How It Works</a>
+            <a href="Application-Form.html">Apply Now</a>
+            <a href="Donation-Page.html">Donate</a>
+            <a href="Contact-Us.html">Contact Us</a>
+        </nav>
+    </div>
+</header>
+
+<div class="container mx-auto p-4">
+   <!-- Apply Online Section -->
+   <section class="my-16 p-6 lg:p-24 bg-white rounded-md shadow-lg" id="apply-online">
+    <div class="flex flex-col lg:flex-row items-center">
+     <div class="lg:w-1/2">
+      <h2 class="text-2xl font-bold hover-underline-animation">
+       Apply Online
+      </h2>
+      <p class="mt-4 fade-in">
+       To begin your journey toward working in the U.S., you must first submit your application. This includes filling out essential details about your qualifications and aspirations, as well as uploading a short introductory video. This video helps potential sponsors understand your background and motivations for seeking a U.S. work opportunity.
+      </p>
+      <form class="mt-8 slide-in-left">
+       <div class="mb-4">
+        <label class="block text-sm font-medium" for="name">
+         Name
+        </label>
+        <input class="mt-1 block w-full p-2 border border-gray-300 rounded-md" id="name" type="text"/>
+       </div>
+       <div class="mb-4">
+        <label class="block text-sm font-medium" for="email">
+         Email
+        </label>
+        <input class="mt-1 block w-full p-2 border border-gray-300 rounded-md" id="email" type="email"/>
+       </div>
+       <div class="mb-4">
+        <label class="block text-sm font-medium" for="video">
+         Introductory Video
+        </label>
+        <input class="mt-1 block w-full p-2 border border-gray-300 rounded-md" id="video" type="file"/>
+       </div>
+       <button class="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600" type="submit">
+        Submit
+       </button>
+      </form>
+     </div>
+     <div class="lg:w-1/2 mt-8 lg:mt-0 lg:ml-8">
+      <img alt="Illustration of a person filling out an online application form" class="w-full h-64 object-cover rounded-md" height="400" src="https://storage.googleapis.com/a1aa/image/uF6l2LrVnu77JZOrPwXGxpS0ehcwL4lPxE6AYXFqXTkYdXEKA.jpg" width="600"/>
+     </div>
+    </div>
+   </section>
+   <!-- Get Sponsored Section -->
+   <section class="my-16 p-6 lg:p-24 bg-white rounded-md shadow-lg" id="get-sponsored">
+    <div class="flex flex-col lg:flex-row items-center">
+     <div class="lg:w-1/2">
+      <h2 class="text-2xl font-bold hover-underline-animation">
+       Get Sponsored
+      </h2>
+      <p class="mt-4 fade-in">
+       Once your application is submitted, you will be able to browse through a curated pool of companies that offer sponsorship opportunities. These companies are seeking skilled individuals like yourself to fill roles in various industries across the U.S. Review their offerings, consider their terms, and select the best sponsor for your career goals. This stage is critical for securing the right fit to support your professional journey.
+      </p>
+     </div>
+     <div class="lg:w-1/2 mt-8 lg:mt-0 lg:ml-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 slide-in-right">
+       <div class="p-4 bg-white rounded-md shadow-md hover:shadow-lg zoom-in">
+        <img alt="Company logo 1" class="w-full h-32 object-cover rounded-md" height="100" src="https://storage.googleapis.com/a1aa/image/beU2Wky0dQ1ucS5RPm5iGhFHflR8xnDC9ScDLXbaYFdouuIUA.jpg" width="100"/>
+        <h3 class="mt-4 text-lg font-semibold">
+         Company 1
+        </h3>
+        <p class="mt-2 text-sm">
+         Description of sponsorship opportunity at Company 1.
+        </p>
+       </div>
+       <div class="p-4 bg-white rounded-md shadow-md hover:shadow-lg zoom-in">
+        <img alt="Company logo 2" class="w-full h-32 object-cover rounded-md" height="100" src="https://storage.googleapis.com/a1aa/image/kOEpvaZGdTIjN5Uiusm969fL2C3Q6O5sC25xovxVczhVXXEKA.jpg" width="100"/>
+        <h3 class="mt-4 text-lg font-semibold">
+         Company 2
+        </h3>
+        <p class="mt-2 text-sm">
+         Description of sponsorship opportunity at Company 2.
+        </p>
+       </div>
+       <div class="p-4 bg-white rounded-md shadow-md hover:shadow-lg zoom-in">
+        <img alt="Company logo 3" class="w-full h-32 object-cover rounded-md" height="100" src="https://storage.googleapis.com/a1aa/image/YRqbFOk692aSGJZxWXQ5Ig4t6MA5GQUPHfW6MRMWOQbWXXEKA.jpg" width="100"/>
+        <h3 class="mt-4 text-lg font-semibold">
+         Company 3
+        </h3>
+        <p class="mt-2 text-sm">
+         Description of sponsorship opportunity at Company 3.
+        </p>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+   <!-- Receive Legal Guidance Section -->
+   <section class="my-16 p-6 lg:p-24 bg-white rounded-md shadow-lg" id="receive-legal-guidance">
+    <div class="flex flex-col lg:flex-row items-center">
+     <div class="lg:w-1/2">
+      <h2 class="text-2xl font-bold hover-underline-animation">
+       Receive Legal Guidance
+      </h2>
+      <p class="mt-4 fade-in">
+       Navigating the U.S. immigration process can be complex, but you won’t have to do it alone. Our legal experts are here to assist you every step of the way. From understanding visa requirements to ensuring all paperwork is completed accurately, our immigration attorneys provide the support necessary to guide you through the legal intricacies of sponsorship. This critical step ensures your application complies with all U.S. immigration laws and regulations.
+      </p>
+     </div>
+     <div class="lg:w-1/2 mt-8 lg:mt-0 lg:ml-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 slide-up">
+       <div class="p-4 bg-white rounded-md shadow-md hover:shadow-lg zoom-in">
+        <img alt="Legal guidance icon 1" class="w-full h-32 object-cover rounded-md" height="100" src="https://storage.googleapis.com/a1aa/image/w3FzM5XQzeyANCwqcxJQKLPFi7hJH2VQDTOnTnCNzflpuuIUA.jpg" width="100"/>
+        <h3 class="mt-4 text-lg font-semibold">
+         Step 1: Visa Requirements
+        </h3>
+        <p class="mt-2 text-sm">
+         Overview of visa requirements and initial steps.
+        </p>
+       </div>
+       <div class="p-4 bg-white rounded-md shadow-md hover:shadow-lg zoom-in">
+        <img alt="Legal guidance icon 2" class="w-full h-32 object-cover rounded-md" height="100" src="https://storage.googleapis.com/a1aa/image/OmM6cvMf7HwBaSbuuB9Mnl0rfUfvF5cJ9GI3YryUHbBcddRoA.jpg" width="100"/>
+        <h3 class="mt-4 text-lg font-semibold">
+         Step 2: Paperwork
+        </h3>
+        <p class="mt-2 text-sm">
+         Details on completing necessary paperwork accurately.
+        </p>
+       </div>
+       <div class="p-4 bg-white rounded-md shadow-md hover:shadow-lg zoom-in">
+        <img alt="Legal guidance icon 3" class="w-full h-32 object-cover rounded-md" height="100" src="https://storage.googleapis.com/a1aa/image/FmJsRfPyruX8GKmWywbvv36arcbd0xodfpUUG18LZiVquuIUA.jpg" width="100"/>
+        <h3 class="mt-4 text-lg font-semibold">
+         Step 3: Legal Support
+        </h3>
+        <p class="mt-2 text-sm">
+         Continuous legal support throughout the process.
+        </p>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+   <!-- Start Working in America Section -->
+   <section class="my-16 p-6 lg:p-24 bg-white rounded-md shadow-lg" id="start-working-in-america">
+    <div class="flex flex-col lg:flex-row items-center">
+     <div class="lg:w-1/2">
+      <h2 class="text-2xl font-bold hover-underline-animation">
+       Start Working in America
+      </h2>
+      <p class="mt-4 fade-in">
+       Congratulations! You've successfully navigated the application, sponsorship, and legal processes. Now it's time to start your career in the United States. With your sponsorship secured and legal matters handled, you're ready to begin your professional journey. Whether you're joining a new company, building your career, or settling into a new life, this step marks the beginning of your exciting future in the U.S.
+      </p>
+     </div>
+     <div class="lg:w-1/2 mt-8 lg:mt-0 lg:ml-8">
+      <img alt="Illustration of a person starting their new job in America" class="w-full h-64 object-cover rounded-md" height="400" src="https://storage.googleapis.com/a1aa/image/jJwzYNHQD4LAHtweEmJmMenDsS9uZE5zp8QNRdl6SXEy6uIUA.jpg" width="600"/>
+     </div>
+    </div>
+    <div class="mt-8 text-center slide-up">
+     <a href="Application-Form.html" >
+	 <button class="px-6 py-3 bg-green-500 text-white rounded-md hover:bg-green-600" >
+      Start Your Journey
+     </button>
+	 </a>
+    </div>
+   </section>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Footer Section -->
+<footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left">
+            <div>
+                <div class="text-2xl font-bold mb-4">
+                    <i class="fas fa-road mr-2"></i>
+                    Pathways to America
+                </div>
+                <p>Paving the Way to US Citizenship</p>
+            </div>
+            <div>
+                <div class="mb-4">
+                    <a href="#"><i class="fas fa-home mr-2"></i>Home</a>
+                    <a href="#"><i class="fas fa-info-circle mr-2"></i>About Us</a>
+                    <a href="#"><i class="fas fa-file-alt mr-2"></i>Apply Now</a>
+                    <a href="#"><i class="fas fa-envelope mr-2"></i>Contact Us</a>
+                    <a href="#"><i class="fas fa-user-secret mr-2"></i>Privacy Policy</a>
+                    <a href="#"><i class="fas fa-file-contract mr-2"></i>Terms of Service</a>
+                </div>
+            </div>
+            <div>
+                <div class="mb-4">
+                    <p><i class="fas fa-phone mr-2"></i>(123) 456-7890</p>
+                    <p><i class="fas fa-envelope mr-2"></i>info@pathwaystoamerica.com</p>
+                    <p><i class="fas fa-map-marker-alt mr-2"></i>123 Main St, Anytown, USA</p>
+                </div>
+            </div>
+            <div>
+                <div class="mb-4">
+                    <a class="text-white mx-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="text-white mx-2" href="#"><i class="fab fa-twitter"></i></a>
+                    <a class="text-white mx-2" href="#"><i class="fab fa-instagram"></i></a>
+                    <a class="text-white mx-2" href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+                <div>
+                    <form class="flex justify-center md:justify-end">
+                        <input class="p-2 rounded-l" placeholder="Subscribe to our newsletter" type="email"/>
+                        <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-r">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>ter>
+<script>
+    document.querySelectorAll('.faq-toggle').forEach(item => {
+        item.addEventListener('click', () => {
+            const answer = item.nextElementSibling;
+            const icon = item.querySelector('i');
+            if (answer.classList.contains('hidden')) {
+                answer.classList.remove('hidden');
+                icon.classList.remove('fa-chevron-down');
+                icon.classList.add('fa-chevron-up');
+            } else {
+                answer.classList.add('hidden');
+                icon.classList.remove('fa-chevron-up');
+                icon.classList.add('fa-chevron-down');
+            }
+        });
+    });
+	<!--------------------ক্লিক করে করার জন্য------------------------------------->
+	     <!-- document.querySelectorAll('.how-it-works-item').forEach(item => { -->
+            <!-- item.addEventListener('click', function() { -->
+                <!-- const step = this.getAttribute('data-step'); -->
+                <!-- document.querySelectorAll('.step-content').forEach(content => { -->
+                    <!-- content.classList.add('hidden'); -->
+                <!-- }); -->
+                <!-- document.getElementById(`step-${step}`).classList.remove('hidden'); -->
+            <!-- }); -->
+        <!-- }); -->
+	
+	
+ document.addEventListener('scroll', function() {
+            const fadeIns = document.querySelectorAll('.fade-in');
+            const slideInLefts = document.querySelectorAll('.slide-in-left');
+            const slideInRights = document.querySelectorAll('.slide-in-right');
+            const slideUps = document.querySelectorAll('.slide-up');
+
+            fadeIns.forEach(el => {
+                if (el.getBoundingClientRect().top < window.innerHeight) {
+                    el.classList.add('visible');
+                }
+            });
+
+            slideInLefts.forEach(el => {
+                if (el.getBoundingClientRect().top < window.innerHeight) {
+                    el.classList.add('visible');
+                }
+            });
+
+            slideInRights.forEach(el => {
+                if (el.getBoundingClientRect().top < window.innerHeight) {
+                    el.classList.add('visible');
+                }
+            });
+
+            slideUps.forEach(el => {
+                if (el.getBoundingClientRect().top < window.innerHeight) {
+                    el.classList.add('visible');
+                }
+            });
+        });
+	
+
+    document.querySelectorAll('.how-it-works-item').forEach(item => {
+        item.addEventListener('mouseover', () => {
+            document.querySelectorAll('.step-content').forEach(content => {
+                content.classList.add('hidden');
+            });
+            const step = item.getAttribute('data-step');
+            document.getElementById(`step-${step}`).classList.remove('hidden');
+        });
+    });
+
+    // Set default active step
+    document.getElementById('step-1').classList.remove('hidden');
+
+    // Mobile menu toggle
+    document.getElementById('menu-toggle').addEventListener('click', () => {
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenu.classList.toggle('hidden');
+    });
+</script>
+</body>
+</html>

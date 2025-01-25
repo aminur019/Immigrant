@@ -1,0 +1,464 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Pathways to America</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+    <style>
+	html {
+    scroll-behavior: smooth;
+}
+        .faq-toggle {
+            cursor: pointer;
+        }
+        .how-it-works-item {
+            cursor: pointer;
+        }
+        .how-it-works-item:hover .icon {
+            color: #1d4ed8;
+        }
+        .how-it-works-item:hover .title {
+            color: #1d4ed8;
+        }
+		.hover-effect:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s;
+        }
+        .hover-bg:hover {
+            background-color: #e0f7fa;
+            transition: background-color 0.3s;
+        }
+        .hover-shadow:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: box-shadow 0.3s;
+        }
+        .hover-icon:hover::after {
+            content: '\f0f0';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            margin-left: 8px;
+        }
+        .hover-bold:hover {
+            font-weight: 700;
+            transition: font-weight 0.3s;
+        }
+        .hover-shimmer:hover {
+            background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.5) 50%, rgba(255,255,255,0) 100%);
+            background-size: 200% 100%;
+            animation: shimmer 1s infinite;
+        }
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+        .scroll-fade {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s, transform 0.6s;
+        }
+        .scroll-fade.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .scroll-slide-left {
+            opacity: 0;
+            transform: translateX(-20px);
+            transition: opacity 0.6s, transform 0.6s;
+        }
+        .scroll-slide-left.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .scroll-slide-right {
+            opacity: 0;
+            transform: translateX(20px);
+            transition: opacity 0.6s, transform 0.6s;
+        }
+        .scroll-slide-right.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .scroll-zoom {
+            opacity: 0;
+            transform: scale(0.95);
+            transition: opacity 0.6s, transform 0.6s;
+        }
+        .scroll-zoom.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+        .scroll-bounce {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s, transform 0.6s;
+        }
+        .scroll-bounce.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+		   .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    .fade-in.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+		
+    </style>
+</head>
+<body class="font-roboto">
+<!-- Header -->
+<header class="bg-blue-700 text-white shadow-lg">
+    <div class="container mx-auto flex justify-between items-center py-4 px-6">
+        <div class="text-2xl font-bold">
+            <i class="fas fa-road mr-2"></i>
+            Pathways to America
+        </div>
+        <div class="md:hidden">
+            <button id="menu-toggle" class="focus:outline-none">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <nav id="navbar" class="hidden md:flex space-x-4">
+            <a href="index.html">Home</a>
+            <a href="About-Us.html">About Us</a>
+            <a href="Job-Categories-Page.html">Job Categories</a>
+            <a href="How-It-Works.html">How It Works</a>
+            <a href="Application-Form.html">Apply Now</a>
+            <a href="Donation-Page.html">Donate</a>
+            <a href="Contact-Us.html">Contact Us</a>
+        </nav>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden absolute z-50 w-full">
+        <nav class="flex flex-col space-y-2 p-4 bg-blue-700">
+            <a href="index.html">Home</a>
+            <a href="About-Us.html">About Us</a>
+            <a href="Job-Categories-Page.html">Job Categories</a>
+            <a href="How-It-Works.html">How It Works</a>
+            <a href="Application-Form.html">Apply Now</a>
+            <a href="Donation-Page.html">Donate</a>
+            <a href="Contact-Us.html">Contact Us</a>
+        </nav>
+    </div>
+</header>
+
+
+
+
+
+ <main class="container mx-auto px-[15%] py-24">
+   <section class="mb-12 flex flex-col lg:flex-row items-center lg:space-x-6 fade-in">
+    <div class="lg:w-1/2 lg:order-2">
+     <h2 class="text-4xl font-bold mb-6 text-blue-700">
+      Our Mission
+     </h2>
+     <p class="text-lg leading-relaxed">
+      Pathways to America is committed to creating a seamless, accessible, and supportive journey for qualified individuals seeking U.S. citizenship. By bridging the gap between foreign professionals and U.S. employers, we offer comprehensive tools, resources, and legal assistance to ensure every applicant has the opportunity to achieve their American Dream. We are driven by the belief that diversity and talent are the cornerstones of a thriving society, and we aim to empower individuals to contribute to America's success.
+     </p>
+    </div>
+    <div class="lg:w-1/2 lg:order-1 lg:mr-8 lg:float-right">
+     <img alt="Illustration of diverse professionals working together towards a common goal" class="rounded-lg shadow-lg mr-12 float-right" height="300" src="https://storage.googleapis.com/a1aa/image/ifKQpbLQ831UWCJVvdkPhGhuWOSVrGmAfbhegv2tPR5PgfiQB.jpg" width="400"/>
+    </div>
+   </section>
+   <section class="mb-12 flex flex-col lg:flex-row items-center lg:space-x-6 fade-in">
+    <div class="lg:w-1/2">
+     <h2 class="text-4xl font-bold mb-6 text-blue-700">
+      Our Story
+     </h2>
+     <p class="text-lg leading-relaxed">
+      Founded on the principle that immigration should be accessible and fair, Pathways to America began as an initiative to simplify the U.S. immigration process for skilled workers worldwide. We recognized the need for a platform that not only supports applicants through the application process but also connects them with companies offering sponsorships and attorneys who provide expert legal advice. Today, Pathways to America serves as a trusted resource for individuals across multiple industries who wish to start a new life in the United States.
+     </p>
+    </div>
+    <div class="lg:w-1/2 lg:mr-8 lg:float-right">
+     <img alt="Illustration of a person navigating through the immigration process with support" class="rounded-lg shadow-lg" height="300" src="https://storage.googleapis.com/a1aa/image/FujdRfWZD9ScBKAlJqmLhAGx1I8MiQzdLHv294YKoNTG4XEKA.jpg" width="400"/>
+    </div>
+   </section>
+   <section class="mb-12 flex flex-col lg:flex-row items-center lg:space-x-6 fade-in">
+    <div class="lg:w-1/2 lg:order-2">
+     <h2 class="text-4xl font-bold mb-6 text-blue-700">
+      Our Values
+     </h2>
+     <ul class="list-disc list-inside text-lg leading-relaxed">
+      <li class="mb-2">
+       <strong>
+        Integrity:
+       </strong>
+       We believe in transparency and upholding the highest ethical standards, ensuring that every applicant's journey is guided with honesty and respect.
+      </li>
+      <li class="mb-2">
+       <strong>
+        Inclusivity:
+       </strong>
+       We champion diversity and strive to create an equitable platform where individuals from all backgrounds can realize their potential and contribute to the American workforce.
+      </li>
+      <li class="mb-2">
+       <strong>
+        Empowerment:
+       </strong>
+       By providing the right resources and legal support, we empower our applicants to navigate their citizenship journey with confidence and success.
+      </li>
+      <li class="mb-2">
+       <strong>
+        Collaboration:
+       </strong>
+       We work closely with trusted employers, immigration professionals, and community organizations to build a strong, supportive network that helps applicants succeed.
+      </li>
+     </ul>
+    </div>
+    <div class="lg:w-1/2 lg:order-1 lg:mr-8 lg:float-right">
+     <img alt="Illustration representing core values like integrity, inclusivity, empowerment, and collaboration" class="rounded-lg shadow-lg mr-12 float-right" height="300" src="https://storage.googleapis.com/a1aa/image/eGL8H2Q2eupEC05UpdiRnCWtbmxmtbNBQdP98nO1fTTKgfiQB.jpg" width="400"/>
+    </div>
+   </section>
+   <section class="mb-12 flex flex-col lg:flex-row items-center lg:space-x-6 fade-in">
+    <div class="lg:w-1/2">
+     <h2 class="text-4xl font-bold mb-6 text-blue-700">
+      What We Offer
+     </h2>
+     <ul class="list-disc list-inside text-lg leading-relaxed">
+      <li class="mb-2">
+       <strong>
+        Job Opportunities:
+       </strong>
+       A broad range of job categories across key industries like healthcare, technology, engineering, and more.
+      </li>
+      <li class="mb-2">
+       <strong>
+        Employer Sponsorships:
+       </strong>
+       Direct access to U.S. companies willing to sponsor visas and help applicants gain employment.
+      </li>
+      <li class="mb-2">
+       <strong>
+        Legal Support:
+       </strong>
+       A network of vetted immigration attorneys to assist with all legal matters related to citizenship applications.
+      </li>
+      <li class="mb-2">
+       <strong>
+        Guidance &amp; Resources:
+       </strong>
+       Step-by-step instructions to help you navigate the immigration process from start to finish.
+      </li>
+     </ul>
+    </div>
+    <div class="lg:w-1/2 lg:mr-8 lg:float-right">
+     <img alt="Illustration of various services offered including job opportunities, legal support, and guidance" class="rounded-lg shadow-lg" height="300" src="https://storage.googleapis.com/a1aa/image/qURWjakqxz4HIxIBcVw4v6n06kNkifU8DW1xjGRjfBCGwvIUA.jpg" width="400"/>
+    </div>
+   </section>
+   <section class="mb-12 flex flex-col lg:flex-row items-center lg:space-x-6 fade-in">
+    <div class="lg:w-1/2 lg:order-2">
+     <h2 class="text-4xl font-bold mb-6 text-blue-700">
+      Why Pathways to America?
+     </h2>
+     <p class="text-lg leading-relaxed">
+      We are more than just a platform—we are your partner in achieving U.S. citizenship. Our commitment to providing personalized, comprehensive support sets us apart. We understand the complexities of the immigration process and are here to make it as straightforward as possible, with expert guidance, job sponsorships, and legal services all in one place.
+     </p>
+    </div>
+    <div class="lg:w-1/2 lg:order-1 lg:mr-8 lg:float-right">
+     <img alt="Illustration of a person receiving comprehensive support from Pathways to America" class="rounded-lg shadow-lg mr-12 float-right" height="300" src="https://storage.googleapis.com/a1aa/image/eMZwSpVDttxOV6bwdAjL5gMJnX13IChuGB1nz5jgEH7B4XEKA.jpg" width="400"/>
+    </div>
+   </section>
+   <section class="mb-12 flex flex-col lg:flex-row items-center lg:space-x-6 fade-in">
+    <div class="lg:w-1/2">
+     <h2 class="text-4xl font-bold mb-6 text-blue-700">
+      Our Impact
+     </h2>
+     <p class="text-lg leading-relaxed">
+      Since launching, we’ve helped thousands of individuals successfully navigate their path to U.S. citizenship, securing jobs in industries critical to the country’s growth. Our applicants go on to make lasting contributions to their communities, their fields, and the U.S. economy. We are proud to be part of their success stories.
+     </p>
+    </div>
+    <div class="lg:w-1/2 lg:mr-8 lg:float-right">
+     <img alt="Illustration of successful individuals contributing to their communities and the economy" class="rounded-lg shadow-lg" height="300" src="https://storage.googleapis.com/a1aa/image/r11T3g4hVirgN1fYgDKC8ZfzX7IG8YUfs7Rq1b9VjHyTgfiQB.jpg" width="400"/>
+    </div>
+   </section>
+   <section class="mb-12 fade-in">
+    <h2 class="text-4xl font-bold mb-6 text-blue-700">
+     Meet the Team
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+     <div class="bg-white p-6 rounded-lg shadow-lg">
+      <img alt="Portrait of John Doe, a team member with a professional appearance" class="w-full h-48 object-cover rounded mb-4 " height="300" src="https://storage.googleapis.com/a1aa/image/5nTNuQV91eUoN6j7e5DFX67PtPTbzenHQ7a5lHBRv54bgfiQB.jpg" width="300"/>
+      <h3 class="text-2xl font-bold mb-2">
+       John Doe
+      </h3>
+      <p class="text-gray-600 mb-4">
+       Immigration Lawyer
+      </p>
+      <p class="text-gray-700 mb-4">
+       "I am dedicated to helping individuals navigate the complex immigration process with ease and confidence. My passion lies in ensuring that every applicant receives the best possible legal support and guidance to achieve their American Dream."
+      </p>
+      <div class="flex space-x-4">
+       <a class="text-blue-700 hover:text-blue-900" href="#">
+        <i class="fab fa-facebook-f">
+        </i>
+       </a>
+       <a class="text-blue-700 hover:text-blue-900" href="#">
+        <i class="fab fa-twitter">
+        </i>
+       </a>
+       <a class="text-blue-700 hover:text-blue-900" href="#">
+        <i class="fab fa-linkedin-in">
+        </i>
+       </a>
+      </div>
+     </div>
+     <div class="bg-white p-6 rounded-lg shadow-lg">
+      <img alt="Portrait of Jane Smith, a team member with a professional appearance" class="w-full h-48 object-cover rounded mb-4" height="300" src="https://storage.googleapis.com/a1aa/image/krUqVX7EzDqMPxJX6PkNFaUVQaKtJRaybd609TeWl4BB4XEKA.jpg" width="300"/>
+      <h3 class="text-2xl font-bold mb-2">
+       Jane Smith
+      </h3>
+      <p class="text-gray-600 mb-4">
+       Human Resources Specialist
+      </p>
+      <p class="text-gray-700 mb-4">
+       "My goal is to connect talented individuals with employers who value their skills and contributions. I believe in the power of diversity and strive to create opportunities that benefit both the applicants and the companies they join."
+      </p>
+      <div class="flex space-x-4">
+       <a class="text-blue-700 hover:text-blue-900" href="#">
+        <i class="fab fa-facebook-f">
+        </i>
+       </a>
+       <a class="text-blue-700 hover:text-blue-900" href="#">
+        <i class="fab fa-twitter">
+        </i>
+       </a>
+       <a class="text-blue-700 hover:text-blue-900" href="#">
+        <i class="fab fa-linkedin-in">
+        </i>
+       </a>
+      </div>
+     </div>
+     <div class="bg-white p-6 rounded-lg shadow-lg">
+      <img alt="Portrait of Emily Johnson, a team member with a professional appearance" class="w-full h-48 object-cover rounded mb-4" height="300" src="https://storage.googleapis.com/a1aa/image/awQPkuXYC84BHNJh8j20YckGV10XbDUqYOnNYfWIZpOA4XEKA.jpg" width="300"/>
+      <h3 class="text-2xl font-bold mb-2">
+       Emily Johnson
+      </h3>
+      <p class="text-gray-600 mb-4">
+       Community Outreach Coordinator
+      </p>
+      <p class="text-gray-700 mb-4">
+       "I strive to build strong community connections that support and uplift our applicants. By fostering relationships with local organizations and community leaders, I aim to create a network of support that helps individuals thrive in their new environment."
+      </p>
+      <div class="flex space-x-4">
+       <a class="text-blue-700 hover:text-blue-900" href="#">
+        <i class="fab fa-facebook-f">
+        </i>
+       </a>
+       <a class="text-blue-700 hover:text-blue-900" href="#">
+        <i class="fab fa-twitter">
+        </i>
+       </a>
+       <a class="text-blue-700 hover:text-blue-900" href="#">
+        <i class="fab fa-linkedin-in">
+        </i>
+       </a>
+      </div>
+     </div>
+    </div>
+   </section>
+   <section class="mb-12 flex flex-col lg:flex-row items-center lg:space-x-6 fade-in">
+    <div class="lg:w-1/2 lg:order-2">
+     <h2 class="text-4xl font-bold mb-6 text-blue-700">
+      Join Us
+     </h2>
+     <p class="text-lg leading-relaxed mb-6">
+      At Pathways to America, we believe in the power of new beginnings. Join us in creating a future where everyone has the opportunity to succeed, thrive, and become a valued member of the American community.
+     </p>
+     <a class="bg-blue-700 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-800 transition duration-300" href="Application-Form.html">
+      Apply Now
+     </a>
+    </div>
+    <div class="lg:w-1/2 lg:order-1 lg:mr-8 lg:float-right">
+     <img alt="Illustration of people joining hands to create a supportive community" class="rounded-lg shadow-lg m-12 lg:m-0 mr-12 " height="300" src="https://storage.googleapis.com/a1aa/image/aODXGKhujhojOF2pIdRCYo2EvrZqd8RqcsiNsQPturlC8LCF.jpg" width="400"/>
+    </div>
+   </section>
+  </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Footer Section -->
+<footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left">
+            <div>
+                <div class="text-2xl font-bold mb-4">
+                    <i class="fas fa-road mr-2"></i>
+                    Pathways to America
+                </div>
+                <p>Paving the Way to US Citizenship</p>
+            </div>
+            <div>
+                <div class="mb-4">
+                    <a class="hover:underline block" href="#"><i class="fas fa-home mr-2"></i>Home</a>
+                    <a class="hover:underline block" href="#"><i class="fas fa-info-circle mr-2"></i>About Us</a>
+                    <a class="hover:underline block" href="#"><i class="fas fa-file-alt mr-2"></i>Apply Now</a>
+                    <a class="hover:underline block" href="#"><i class="fas fa-envelope mr-2"></i>Contact Us</a>
+                    <a class="hover:underline block" href="#"><i class="fas fa-user-secret mr-2"></i>Privacy Policy</a>
+                    <a class="hover:underline block" href="#"><i class="fas fa-file-contract mr-2"></i>Terms of Service</a>
+                </div>
+            </div>
+            <div>
+                <div class="mb-4">
+                    <p><i class="fas fa-phone mr-2"></i>(123) 456-7890</p>
+                    <p><i class="fas fa-envelope mr-2"></i>info@pathwaystoamerica.com</p>
+                    <p><i class="fas fa-map-marker-alt mr-2"></i>123 Main St, Anytown, USA</p>
+                </div>
+            </div>
+            <div>
+                <div class="mb-4">
+                    <a class="text-white mx-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="text-white mx-2" href="#"><i class="fab fa-twitter"></i></a>
+                    <a class="text-white mx-2" href="#"><i class="fab fa-instagram"></i></a>
+                    <a class="text-white mx-2" href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+                <div>
+                    <form class="flex justify-center md:justify-end">
+                        <input class="p-2 rounded-l" placeholder="Subscribe to our newsletter" type="email"/>
+                        <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-r">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>ter>
+<script>
+   
+    // Mobile menu toggle
+    document.getElementById('menu-toggle').addEventListener('click', () => {
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenu.classList.toggle('hidden');
+    });
+	
+	
+	
+	
+	
+	    document.addEventListener('DOMContentLoaded', function() {
+      const sections = document.querySelectorAll('.fade-in');
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+          }
+        });
+      }, { threshold: 0.1 });
+
+      sections.forEach(section => {
+        observer.observe(section);
+      });
+    });
+</script>
+</body>
+</html>

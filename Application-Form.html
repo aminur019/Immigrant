@@ -1,0 +1,229 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Pathways to America</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+    <style>
+	html {
+    scroll-behavior: smooth;
+}
+        .faq-toggle {
+            cursor: pointer;
+        }
+        .how-it-works-item {
+            cursor: pointer;
+        }
+        .how-it-works-item:hover .icon {
+            color: #1d4ed8;
+        }
+        .how-it-works-item:hover .title {
+            color: #1d4ed8;
+        }
+		
+    </style>
+</head>
+<body class="font-roboto">
+<!-- Header -->
+<header class="bg-blue-700 text-white shadow-lg">
+    <div class="container mx-auto flex justify-between items-center py-4 px-6">
+        <div class="text-2xl font-bold">
+            <i class="fas fa-road mr-2"></i>
+            Pathways to America
+        </div>
+        <div class="md:hidden">
+            <button id="menu-toggle" class="focus:outline-none">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <nav id="navbar" class="hidden md:flex space-x-4">
+            <a href="index.html">Home</a>
+            <a href="About-Us.html">About Us</a>
+            <a href="Job-Categories-Page.html">Job Categories</a>
+            <a href="How-It-Works.html">How It Works</a>
+            <a href="Application-Form.html">Apply Now</a>
+            <a href="Donation-Page.html">Donate</a>
+            <a href="Contact-Us.html">Contact Us</a>
+        </nav>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden absolute z-50 w-full">
+        <nav class="flex flex-col space-y-2 p-4 bg-blue-700">
+            <a href="index.html">Home</a>
+            <a href="About-Us.html">About Us</a>
+            <a href="Job-Categories-Page.html">Job Categories</a>
+            <a href="How-It-Works.html">How It Works</a>
+            <a href="Application-Form.html">Apply Now</a>
+            <a href="Donation-Page.html">Donate</a>
+            <a href="Contact-Us.html">Contact Us</a>
+        </nav>
+    </div>
+</header>
+
+<div class="max-w-4xl mx-auto p-8 bg-white shadow-lg rounded-lg mt-10">
+        <h1 class="text-4xl font-bold mb-8 text-center text-blue-600">Apply to Become a U.S. Citizen Today</h1>
+        <p class="mb-8 text-center text-gray-700">Welcome to the official application portal for U.S. Citizenship. Please fill out the form below with accurate and detailed information to begin your journey to becoming an American citizen.</p>
+        
+        <form>
+            <div class="mb-6">
+                <label class="block text-gray-700 font-bold mb-2" for="full-name">Full Name:</label>
+                <input type="text" id="full-name" class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Please enter your full legal name">
+            </div>
+            
+            <div class="mb-6">
+                <label class="block text-gray-700 font-bold mb-2" for="residence">Place of Residence:</label>
+                <input type="text" id="residence" class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="City, State, ZIP Code">
+            </div>
+            
+            <div class="mb-6">
+                <label class="block text-gray-700 font-bold mb-2" for="phone-number">Phone Number:</label>
+                <input type="text" id="phone-number" class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter a valid phone number where you can be reached">
+            </div>
+            
+            <div class="mb-6">
+                <label class="block text-gray-700 font-bold mb-2" for="email">Email Address:</label>
+                <input type="email" id="email" class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter your email for future communications">
+            </div>
+            
+            <div class="mb-6">
+                <label class="block text-gray-700 font-bold mb-2" for="job-experience">Job Experience:</label>
+                <textarea id="job-experience" class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Please provide detailed information about your professional background. You may also upload your resume."></textarea>
+            </div>
+            
+            <div class="mb-6">
+                <label class="block text-gray-700 font-bold mb-2" for="desired-job">Desired Job in America:</label>
+                <select id="desired-job" class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <option>Select a career category</option>
+                    <option>Engineering</option>
+                    <option>Healthcare</option>
+                    <option>Education</option>
+                    <option>Information Technology</option>
+                    <option>Finance</option>
+                    <option>Other</option>
+                </select>
+            </div>
+            
+            <div class="mb-6">
+                <label class="block text-gray-700 font-bold mb-2" for="resume-upload">Upload Resume:</label>
+                <input type="file" id="resume-upload" class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+            
+            <div class="mb-6">
+                <label class="block text-gray-700 font-bold mb-2">Green Check Donation Option:</label>
+                <div class="flex items-center">
+                    <input type="checkbox" id="donation" class="mr-2 focus:ring-2 focus:ring-blue-500">
+                    <label for="donation" class="text-gray-700">I’d like to expedite my application with a $49.99 donation to the American Border Foundation.</label>
+                </div>
+            </div>
+            
+            <div class="mb-6">
+                <label class="block text-gray-700 font-bold mb-2" for="video-upload">Video Upload Section:</label>
+                <p class="mb-2 text-gray-700">Please upload a short video (maximum 2 minutes) sharing why you wish to become a U.S. Citizen. Your story is important to us.</p>
+                <input type="file" id="video-upload" class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+            
+            <div class="text-center">
+                <button type="submit" class="bg-blue-600 text-white px-8 py-3 rounded-lg font-bold hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">Apply Now!</button>
+            </div>
+        </form>
+        
+        <div class="mt-10 text-center">
+            <p class="text-gray-700">If you represent a company and wish to sponsor an individual’s pathway to U.S. citizenship, <a href="#" class="text-blue-600 font-bold hover:underline">click here</a> to learn more about our sponsorship opportunities.</p>
+        </div>
+    </div>
+<!-- Footer Section -->
+<footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left">
+            <div>
+                <div class="text-2xl font-bold mb-4">
+                    <i class="fas fa-road mr-2"></i>
+                    Pathways to America
+                </div>
+                <p>Paving the Way to US Citizenship</p>
+            </div>
+            <div>
+                <div class="mb-4">
+                    <a class="hover:underline block" href="#"><i class="fas fa-home mr-2"></i>Home</a>
+                    <a class="hover:underline block" href="#"><i class="fas fa-info-circle mr-2"></i>About Us</a>
+                    <a class="hover:underline block" href="#"><i class="fas fa-file-alt mr-2"></i>Apply Now</a>
+                    <a class="hover:underline block" href="#"><i class="fas fa-envelope mr-2"></i>Contact Us</a>
+                    <a class="hover:underline block" href="#"><i class="fas fa-user-secret mr-2"></i>Privacy Policy</a>
+                    <a class="hover:underline block" href="#"><i class="fas fa-file-contract mr-2"></i>Terms of Service</a>
+                </div>
+            </div>
+            <div>
+                <div class="mb-4">
+                    <p><i class="fas fa-phone mr-2"></i>(123) 456-7890</p>
+                    <p><i class="fas fa-envelope mr-2"></i>info@pathwaystoamerica.com</p>
+                    <p><i class="fas fa-map-marker-alt mr-2"></i>123 Main St, Anytown, USA</p>
+                </div>
+            </div>
+            <div>
+                <div class="mb-4">
+                    <a class="text-white mx-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="text-white mx-2" href="#"><i class="fab fa-twitter"></i></a>
+                    <a class="text-white mx-2" href="#"><i class="fab fa-instagram"></i></a>
+                    <a class="text-white mx-2" href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+                <div>
+                    <form class="flex justify-center md:justify-end">
+                        <input class="p-2 rounded-l" placeholder="Subscribe to our newsletter" type="email"/>
+                        <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-r">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>ter>
+<script>
+    document.querySelectorAll('.faq-toggle').forEach(item => {
+        item.addEventListener('click', () => {
+            const answer = item.nextElementSibling;
+            const icon = item.querySelector('i');
+            if (answer.classList.contains('hidden')) {
+                answer.classList.remove('hidden');
+                icon.classList.remove('fa-chevron-down');
+                icon.classList.add('fa-chevron-up');
+            } else {
+                answer.classList.add('hidden');
+                icon.classList.remove('fa-chevron-up');
+                icon.classList.add('fa-chevron-down');
+            }
+        });
+    });
+	<!--------------------ক্লিক করে করার জন্য------------------------------------->
+	     <!-- document.querySelectorAll('.how-it-works-item').forEach(item => { -->
+            <!-- item.addEventListener('click', function() { -->
+                <!-- const step = this.getAttribute('data-step'); -->
+                <!-- document.querySelectorAll('.step-content').forEach(content => { -->
+                    <!-- content.classList.add('hidden'); -->
+                <!-- }); -->
+                <!-- document.getElementById(`step-${step}`).classList.remove('hidden'); -->
+            <!-- }); -->
+        <!-- }); -->
+	
+	
+	
+	
+
+    document.querySelectorAll('.how-it-works-item').forEach(item => {
+        item.addEventListener('mouseover', () => {
+            document.querySelectorAll('.step-content').forEach(content => {
+                content.classList.add('hidden');
+            });
+            const step = item.getAttribute('data-step');
+            document.getElementById(`step-${step}`).classList.remove('hidden');
+        });
+    });
+
+    // Set default active step
+    document.getElementById('step-1').classList.remove('hidden');
+
+    // Mobile menu toggle
+    document.getElementById('menu-toggle').addEventListener('click', () => {
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenu.classList.toggle('hidden');
+    });
+</script>
+</body>
+</html>

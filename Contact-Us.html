@@ -1,0 +1,299 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Pathways to America</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+    <style>
+	html {
+    scroll-behavior: smooth;
+}
+        .faq-toggle {
+            cursor: pointer;
+        }
+        .how-it-works-item {
+            cursor: pointer;
+        }
+        .how-it-works-item:hover .icon {
+            color: #1d4ed8;
+        }
+        .how-it-works-item:hover .title {
+            color: #1d4ed8;
+        }
+		.hover-effect:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s;
+        }
+        .hover-bg:hover {
+            background-color: #e0f7fa;
+            transition: background-color 0.3s;
+        }
+        .hover-shadow:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: box-shadow 0.3s;
+        }
+        .hover-icon:hover::after {
+            content: '\f0f0';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            margin-left: 8px;
+        }
+        .hover-bold:hover {
+            font-weight: 700;
+            transition: font-weight 0.3s;
+        }
+        .hover-shimmer:hover {
+            background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.5) 50%, rgba(255,255,255,0) 100%);
+            background-size: 200% 100%;
+            animation: shimmer 1s infinite;
+        }
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+        .scroll-fade {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s, transform 0.6s;
+        }
+        .scroll-fade.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .scroll-slide-left {
+            opacity: 0;
+            transform: translateX(-20px);
+            transition: opacity 0.6s, transform 0.6s;
+        }
+        .scroll-slide-left.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .scroll-slide-right {
+            opacity: 0;
+            transform: translateX(20px);
+            transition: opacity 0.6s, transform 0.6s;
+        }
+        .scroll-slide-right.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .scroll-zoom {
+            opacity: 0;
+            transform: scale(0.95);
+            transition: opacity 0.6s, transform 0.6s;
+        }
+        .scroll-zoom.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+        .scroll-bounce {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s, transform 0.6s;
+        }
+        .scroll-bounce.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+		
+    </style>
+</head>
+<body class="font-roboto">
+<!-- Header -->
+<header class="bg-blue-700 text-white shadow-lg">
+    <div class="container mx-auto flex justify-between items-center py-4 px-6">
+        <div class="text-2xl font-bold">
+            <i class="fas fa-road mr-2"></i>
+            Pathways to America
+        </div>
+        <div class="md:hidden">
+            <button id="menu-toggle" class="focus:outline-none">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <nav id="navbar" class="hidden md:flex space-x-4">
+            <a href="index.html">Home</a>
+            <a href="About-Us.html">About Us</a>
+            <a href="Job-Categories-Page.html">Job Categories</a>
+            <a href="How-It-Works.html">How It Works</a>
+            <a href="Application-Form.html">Apply Now</a>
+            <a href="Donation-Page.html">Donate</a>
+            <a href="Contact-Us.html">Contact Us</a>
+        </nav>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden absolute z-50 w-full">
+        <nav class="flex flex-col space-y-2 p-4 bg-blue-700">
+            <a href="index.html">Home</a>
+            <a href="About-Us.html">About Us</a>
+            <a href="Job-Categories-Page.html">Job Categories</a>
+            <a href="How-It-Works.html">How It Works</a>
+            <a href="Application-Form.html">Apply Now</a>
+            <a href="Donation-Page.html">Donate</a>
+            <a href="Contact-Us.html">Contact Us</a>
+        </nav>
+    </div>
+</header>
+
+
+
+
+
+
+
+<div class="container mx-auto p-6">
+        <div class="bg-white p-8 rounded-lg shadow-lg max-w-lg mx-auto">
+            <h1 class="text-3xl font-bold mb-6 text-center text-indigo-600">Contact Us</h1>
+            <p class="mb-6 text-gray-700 text-center">We value your feedback and are here to assist you. Please fill out the form below, and a member of our team will get back to you as soon as possible.</p>
+            <form class="space-y-6">
+                <div>
+                    <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+                    <input type="text" id="name" name="name" class="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="Enter your full name">
+                </div>
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                    <input type="email" id="email" name="email" class="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="Enter your email address">
+                </div>
+                <div>
+                    <label for="subject" class="block text-sm font-medium text-gray-700">Subject</label>
+                    <input type="text" id="subject" name="subject" class="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="Select or enter the subject of your inquiry">
+                </div>
+                <div>
+                    <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+                    <textarea id="message" name="message" rows="4" class="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="Provide details of your inquiry"></textarea>
+                </div>
+                <div>
+                    <button type="submit" class="w-full bg-indigo-600 text-white p-3 rounded-md shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Submit</button>
+                </div>
+            </form>
+            <div class="mt-8 text-center">
+                <h2 class="text-xl font-bold mb-4 text-indigo-600">For immediate assistance, please don’t hesitate to reach out directly:</h2>
+                <div class="flex justify-center space-x-4">
+                    <button class="bg-indigo-600 text-white p-3 rounded-md shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                        <i class="fas fa-phone-alt"></i> Customer Support Helpline
+                    </button>
+                    <button class="bg-indigo-600 text-white p-3 rounded-md shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                        <i class="fas fa-envelope"></i> Email Support
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Footer Section -->
+<footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left">
+            <div>
+                <div class="text-2xl font-bold mb-4">
+                    <i class="fas fa-road mr-2"></i>
+                    Pathways to America
+                </div>
+                <p>Paving the Way to US Citizenship</p>
+            </div>
+            <div>
+                <div class="mb-4">
+                    <a class="hover:underline block" href="#"><i class="fas fa-home mr-2"></i>Home</a>
+                    <a class="hover:underline block" href="#"><i class="fas fa-info-circle mr-2"></i>About Us</a>
+                    <a class="hover:underline block" href="#"><i class="fas fa-file-alt mr-2"></i>Apply Now</a>
+                    <a class="hover:underline block" href="#"><i class="fas fa-envelope mr-2"></i>Contact Us</a>
+                    <a class="hover:underline block" href="#"><i class="fas fa-user-secret mr-2"></i>Privacy Policy</a>
+                    <a class="hover:underline block" href="#"><i class="fas fa-file-contract mr-2"></i>Terms of Service</a>
+                </div>
+            </div>
+            <div>
+                <div class="mb-4">
+                    <p><i class="fas fa-phone mr-2"></i>(123) 456-7890</p>
+                    <p><i class="fas fa-envelope mr-2"></i>info@pathwaystoamerica.com</p>
+                    <p><i class="fas fa-map-marker-alt mr-2"></i>123 Main St, Anytown, USA</p>
+                </div>
+            </div>
+            <div>
+                <div class="mb-4">
+                    <a class="text-white mx-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="text-white mx-2" href="#"><i class="fab fa-twitter"></i></a>
+                    <a class="text-white mx-2" href="#"><i class="fab fa-instagram"></i></a>
+                    <a class="text-white mx-2" href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+                <div>
+                    <form class="flex justify-center md:justify-end">
+                        <input class="p-2 rounded-l" placeholder="Subscribe to our newsletter" type="email"/>
+                        <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-r">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>ter>
+<script>
+    document.querySelectorAll('.faq-toggle').forEach(item => {
+        item.addEventListener('click', () => {
+            const answer = item.nextElementSibling;
+            const icon = item.querySelector('i');
+            if (answer.classList.contains('hidden')) {
+                answer.classList.remove('hidden');
+                icon.classList.remove('fa-chevron-down');
+                icon.classList.add('fa-chevron-up');
+            } else {
+                answer.classList.add('hidden');
+                icon.classList.remove('fa-chevron-up');
+                icon.classList.add('fa-chevron-down');
+            }
+        });
+    });
+	<!--------------------ক্লিক করে করার জন্য------------------------------------->
+	     <!-- document.querySelectorAll('.how-it-works-item').forEach(item => { -->
+            <!-- item.addEventListener('click', function() { -->
+                <!-- const step = this.getAttribute('data-step'); -->
+                <!-- document.querySelectorAll('.step-content').forEach(content => { -->
+                    <!-- content.classList.add('hidden'); -->
+                <!-- }); -->
+                <!-- document.getElementById(`step-${step}`).classList.remove('hidden'); -->
+            <!-- }); -->
+        <!-- }); -->
+	
+	
+	document.addEventListener('scroll', function() {
+            const elements = document.querySelectorAll('.scroll-fade, .scroll-slide-left, .scroll-slide-right, .scroll-zoom, .scroll-bounce');
+            elements.forEach(element => {
+                const rect = element.getBoundingClientRect();
+                if (rect.top < window.innerHeight) {
+                    element.classList.add('visible');
+                }
+            });
+        });
+	
+
+    document.querySelectorAll('.how-it-works-item').forEach(item => {
+        item.addEventListener('mouseover', () => {
+            document.querySelectorAll('.step-content').forEach(content => {
+                content.classList.add('hidden');
+            });
+            const step = item.getAttribute('data-step');
+            document.getElementById(`step-${step}`).classList.remove('hidden');
+        });
+    });
+
+    // Set default active step
+    document.getElementById('step-1').classList.remove('hidden');
+
+    // Mobile menu toggle
+    document.getElementById('menu-toggle').addEventListener('click', () => {
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenu.classList.toggle('hidden');
+    });
+</script>
+</body>
+</html>
